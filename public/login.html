@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="stylesheets/landing-page.css">
+</head>
+<body>
+
+<div class="landing-page" >
+    <img class="landing-page-img" src="images/doubts.jpg" alt="">
+    <div class="faculty-connect">
+        <h1>Faculty Connect</h1>
+        <p>Having doubts? Let's get them clear</p>
+        <button id="student" type="button" class="submit">Students</button>
+        <button type="button" class="submit">Teachers</button>
+    </div>
+</div>
+
+<div id="sigin-students-modal">
+    <div class="sigin-students-content">
+        <span class="close">&times;</span>
+        <form action="/student" method="GET">
+            <label for="enrollno">Institute allocated unique enrollment number</label><br>
+            <input type="text" class="enrollno" name="enrollno" required pattern="[A-Z0-9]+"><br><br>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+</div>
+
+<script src='./javascripts/popup.js'></script>
+
+</body>
+</html>

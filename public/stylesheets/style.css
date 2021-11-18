@@ -1,0 +1,18 @@
+.prof-name-table {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  border: 5px solid;
+  border-radius: 20px;
+  background-color: #00a651;
+  color: white;
+  padding: 8px;
+  /* margin-left: 5px; */
+  /* margin-right: 5px; */
+  width: 90%;
+  font-weight: bolder;
+}
+
+.prof-name-table:hover {
+  cursor: pointer;
+  border-color: yellowgreen;
+}
