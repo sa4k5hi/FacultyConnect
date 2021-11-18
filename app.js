@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -35,6 +36,14 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')));
+
+const limiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 20, // limit each IP to 2 requests per windowMs
+  message: "Too many requests created from this IP, please try again after a minute"
+});
+
+app.use(limiter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
