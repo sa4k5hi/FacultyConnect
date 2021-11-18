@@ -19,7 +19,7 @@ console.log(__dirname);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 var mongoose = require('mongoose');
-const { dirname } = require('path');
+
 var DB_LINK = 'mongodb+srv://saakshi:qwop1290@cluster0.fmyko.mongodb.net/Faculty_Connect_MS_Engage?retryWrites=true&w=majority';
 mongoose
   .connect(
