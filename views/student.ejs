@@ -7,58 +7,46 @@
   <body>
     <h4>Enrollment number: <%= enrollno %> </h4>
 
-     <h1>TIME TABLE</h1>
+     <h1>DOUBTS SLOTS</h1>
      <table align="center" border="2">
        <tr>
         <td align="center" height="50" width="100"><br><b>Day/Slots</b></br></td>
-        <td align="center" height="50" width="100"><b>I<br>1-2</b></td>
-        <td align="center" height="50" width="100"><b>II<br>2-3</b></td>
-        <td align="center" height="50" width="100"><b>III<br>3-4</b></td>
-        <td align="center" height="50" width="100"><b>IV<br>4-5</b></td>
+        <td align="center" height="50" width="100"><b>Monday</b></td>
+        <td align="center" height="50" width="100"><b>Tuesday</b></td>
+        <td align="center" height="50" width="100"><b>Wednesday</b></td>
+        <td align="center" height="50" width="100"><b>Thursday</b></td>
+        <td align="center" height="50" width="100"><b>Friday</b></td>
        </tr>
 
-       <% for(let obj in time_table) { %>
+       <% for(const [key, val] of time_table) { %>
 
         <tr>
           <td align="center" height="50" width="100">
-            <% console.log(time_table[obj]['day']); %>
-            <%= time_table[obj]['day'] %>
+            <%= key %>
           </td>
 
-          <% var cnt=0 %>
-          <% for(let currentSlots in time_table[obj]['availableSlots']) { 
-            cnt=cnt+1
+          <% for(let index=0; index!=val.length; index++)  { 
+            if(typeof val[index] == 'undefined' && val[index] == null) { %>
 
-            while(Math.floor(currentSlots)!=cnt) { %>
               <td align="center" height="50" width="100"></td>
-              <% cnt = cnt + 1;
-            }
 
-            if(time_table[obj]['availableSlots'].hasOwnProperty(currentSlots)) { 
-              console.log('currentSlots: '+currentSlots); %>
+            <% } else { %>
 
               <td align="center" height="50" width="100"><br>
-              <% for(let profs in time_table[obj]['availableSlots'][currentSlots]) {
-                console.log(time_table[obj]['availableSlots'][currentSlots][profs]); %>
-                  <div>
-                    <button class="prof-name-table" onclick="">
-                      <div >
-                        <%= time_table[obj]['availableSlots'][currentSlots][profs] %>
-                        <br>
-                      </div>
-                    </button>
-                  </div>
+
+              <% for(let slot=0 ; slot!= val[index].length; slot++) { %>
+                <div>
+                  <button class="prof-name-table" onclick="">
+                    <div >
+                      <%= val[index][slot] %>
+                      <br>
+                    </div>
+                  </button>
+                </div>
               <% } %>
-              <br></td>
-
-            <% }
-             %>
-          <% } console.log(" newline"); %>
-
-          <% while(cnt != 4) { %>
-            <td align="center" height="50" width="100"></td>
-            <% cnt = cnt + 1;
-         } %>
+              </td>
+            <% } %>
+          <% } %>
         
         </tr>
         

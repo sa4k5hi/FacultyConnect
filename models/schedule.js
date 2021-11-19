@@ -4,14 +4,16 @@ var Schema = mongoose.Schema;
 
 var scheduleSchema = new Schema(
     {
+        name: {
+            type: String
+        },
+
         day: {
             type: String,
-            required:true,
-            unique: true
         },
 
         availableSlots: {
-            type: Schema.Types.Mixed,
+            type: [String],
         }
     }
 );
