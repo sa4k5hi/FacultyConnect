@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>student</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h4>Faculty Code: <%= facultyCode %> </h4>
+
+     <h1>DOUBTS SLOTS</h1>
+     <table align="center" border="2">
+       <tr>
+        <td align="center" height="50" width="100"><br><b>Day/Slots</b></br></td>
+        <td align="center" height="50" width="100"><b>Monday</b></td>
+        <td align="center" height="50" width="100"><b>Tuesday</b></td>
+        <td align="center" height="50" width="100"><b>Wednesday</b></td>
+        <td align="center" height="50" width="100"><b>Thursday</b></td>
+        <td align="center" height="50" width="100"><b>Friday</b></td>
+       </tr>
+
+       <% for(const [key, val] of time_table) { %>
+
+        <tr>
+          <td align="center" height="50" width="100">
+            <%= key %>
+          </td>
+
+          <% for(let index=0; index!=val.length; index++)  { 
+            if(typeof val[index] == 'undefined' && val[index] == null) { %>
+
+              <td align="center" height="50" width="100"></td>
+
+            <% } else { %>
+
+              <td align="center" height="50" width="100"><br>
+
+              <% for(let slot=0 ; slot!= val[index].length; slot++) { %>
+                <div>
+                  <button class="prof-name-table" onclick="">
+                    <div >
+                      <%= val[index][slot] %>
+                      <br>
+                    </div>
+                  </button>
+                </div>
+              <% } %>
+              </td>
+            <% } %>
+          <% } %>
+        
+        </tr>
+        
+      <% } %>
+     </table>
+    
+  </body>
+</html>

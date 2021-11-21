@@ -1,34 +1,15 @@
 var scheduleCollection = require('../models/schedule');
 
-async function allFacultiesDoubtsSlotsMapper (data) {
-    const allFacultiesDoubtsSlots = new Map();
-    const daysMapping = new Map([
-    	["Monday",0],
-        ["Tuesday",1],
-        ["Wednesday",2],
-        ["Thursday",3],
-        ["Friday",4],
-    ]);
-    for(let obj in data) {
-        
-    	if (allFacultiesDoubtsSlots.has(data[obj]["name"])) {
-        	var facultySlots = allFacultiesDoubtsSlots.get(data[obj]["name"]);
-            var dayIndex = daysMapping.get(data[obj]["day"]);
-            facultySlots[dayIndex]=data[obj]["availableSlots"];
-            allFacultiesDoubtsSlots.set(data[obj]["name"],facultySlots);
-        } else {
-        	var facultySlots=new Array(5);
-            var dayIndex = daysMapping.get(data[obj]["day"]);
-            facultySlots[dayIndex]=data[obj]["availableSlots"];
-        	allFacultiesDoubtsSlots.set(data[obj]["name"],facultySlots);
-        }
-    }
-    return allFacultiesDoubtsSlots;
-}
+const {getDoubtsSlots} = require('../utils/facultyDoubtsSlotsMapping');
+
+var User = require('../models/userModels');
 
 exports.allFacultiesDoubtsSlots = async (req,res) => {
+    var user = await User.findOne({email : req.body.email})
+                            .select('registerationCode')
+                            .exec();
     const data = await scheduleCollection.find({});
-    var time_table = await allFacultiesDoubtsSlotsMapper(data);
-    res.render( 'student', { enrollno: req.query.enrollno, time_table: time_table} );
+    var time_table = await getDoubtsSlots(data);
+    res.render( 'student', { enrollno: user.registerationCode, time_table: time_table} );
 };
 

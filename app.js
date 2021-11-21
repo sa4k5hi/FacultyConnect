@@ -7,11 +7,14 @@ const cors = require('cors');
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 var favicon = require('serve-favicon')
+const { signup, signin, logout, protectRoute, isLoggedIn } = require('./controllers/authController');
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var facultyRouter = require('./routes/faculty');
 var studentRouter = require('./routes/student');
+var getRegister = require('./routes/register');
+var getLogin = require('./routes/login');
 
 var app = express();
 // Serve Favicon
@@ -44,15 +47,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const limiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
-  max: 20, // limit each IP to 2 requests per windowMs
+  max: 20, // limit each IP to 20 requests per windowMs
   message: "Too many requests created from this IP, please try again after a minute"
 });
 
 app.use(limiter);
 
+app.post('/auth/signup', signup)
+app.post('/auth/login',signin)
+
+// app.use(protectRoute);
+// app.use(isLoggedIn);
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/faculty', facultyRouter);
 app.use('/student',studentRouter);
+app.use('/signup',getRegister);
+app.use('/signin',getLogin);
+app.post("/logout",logout);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

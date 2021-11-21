@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/stylesheets/register.css">
+  </head>
+  <body>
+
+    <div class="signup-box">
+      <img src="/images/logo.png" class="avatar" alt="">
+      <h1>Welcome to FacultyConnect</h1>
+      <h1>Register</h1>
+      <form action="/auth/signup" method="POST">
+
+        <label for="email">Email</label>
+        <input type="email" class="email" name="email" placeholder="Enter email" required>
+
+        <label for="register_code">Institute ID</label><br>
+        <input type="text" class="register_code" name="register_code" required pattern="[A-Z0-9]+" placeholder="Enter Institute ID"><br><br>
+
+        <label for="name">Name</label>
+        <input type="text" class="name" name="name" placeholder="Enter name" required>
+
+        <label for="role">Your Role (Student/Teacher)</label>
+        <input type="text" class="role" name="role" placeholder="Enter your role" required>
+
+        <label for="password">Password</label>
+        <input type="password" class="password" name="password" placeholder="Enter Password" required>
+
+        <input type="submit" value="Register" class="submit">
+
+        <a href="/signin">Already have an account?</a>
+      </form>
+    </div>
+  </body>
+</html>
