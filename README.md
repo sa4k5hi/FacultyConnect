@@ -1,8 +1,6 @@
 # FacultyConnect
 Online Doubts Addressal Platform
 
-Online Doubts Addressal Platform with `FacultyConnect`
-
 ## Features
 
 1. Landing Page
