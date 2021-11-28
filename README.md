@@ -7,8 +7,6 @@ Online Doubts Addressal Platform
 ![GitHub last commit](https://img.shields.io/github/last-commit/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sa4k5hi/FacultyConnect?style=for-the-badge)
-![Steam File Size](https://img.shields.io/steam/size/bnbm)
-![Steam File Size](https://img.shields.io/steam/size/bnbm?style=for-the-badge)
 
 
 ## Features
