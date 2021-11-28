@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
 .prof-name-table {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
@@ -8,11 +14,174 @@
   padding: 8px;
   /* margin-left: 5px; */
   /* margin-right: 5px; */
-  width: 90%;
+  width: 80%;
   font-weight: bolder;
 }
 
 .prof-name-table:hover {
   cursor: pointer;
-  border-color: yellowgreen;
+  /* border-color: yellowgreen; */
+}
+
+.slots-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.slots-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#search {
+  /* background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat; */
+  width: 60%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  /* left: 500px; */
+  top: 50px;
+  position: relative;
+}
+
+#doubts-table {
+  border-collapse: collapse;
+  width: 60%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  /* left: 500px; */
+  top: 70px;
+  position: relative;
+}
+
+#doubts-table tr.header, #doubts-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#doubts-table tr{
+  border-bottom: 1px solid #ddd;
+}
+
+#doubts-table th, #doubts-table td {
+  padding: 12px;
+}
+
+#doubts-table th{
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 270px;
+  top: 100px;
+}
+
+.card {
+  /* left: 600px; */
+  top:150px;
+  position: relative;
+}
+
+.card-title {
+  padding: 12px;
+  border-bottom:1px solid darkgrey;
+}
+
+.card-text {
+  padding: 12px;
+}
+
+.slot-btn {
+  position: relative;
+  left: 10rem;
+}
+
+.sidebar {
+  background-color: #312450;
+  width : 500px;
+  float: left;
+  height: 100%;
+  color: whitesmoke;
+}
+
+img {
+  border-radius: 50%;
+  height: 100px;
+  margin-top: 200px;
+  margin-left: 40px;
+  float: left;
+}
+
+.fc {
+  padding-top: 80px;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  margin-top: 150px;
+  margin-left: 170px;
+  width: 100%;
+}
+
+.user {
+  position: relative;
+  top: 50px;
+  color:rgb(107, 230, 235);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  left:140px;
+}
+
+.user-details {
+  color: whitesmoke;
+}
+
+.logout {
+  margin-top: 40px;
+}
+
+.line {
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+  border-radius: 0.2em;
+  content: '';
+  height: 0.1em;
+  margin-top: 40px;
+  /* position: absolute; */
+  right: 0;
+  width: 60%;
 }

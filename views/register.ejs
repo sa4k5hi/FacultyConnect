@@ -28,6 +28,10 @@
         <label for="password">Password</label>
         <input type="password" class="password" name="password" placeholder="Enter Password" required>
 
+        <% if(alreadyExist) { %>
+          <p class="existing-user">This email already exists</p>
+        <% } %>
+
         <input type="submit" value="Register" class="submit">
 
         <a href="/signin">Already have an account?</a>

@@ -1,0 +1,75 @@
+<div class="sidebar">
+    <img src="/images/logo.png" alt="">
+    <div class="fc">
+      <p>FacultyConnect</p>
+    </div>
+    <br>
+    <div class="user">
+      <p style="margin-bottom: 20px ;">User Details</p>
+      <div class="user-details">
+        <p> Name: <%= name %> </p>
+        <p> Email: <%= email %> </p>
+      </div>
+      <div class="line"></div>
+      <a href="/logout"><button type="button" class="btn logout btn-info">Logout <i class="fas fa-sign-out-alt"></i></button></a>
+    </div>
+  </div>
+  
+  <div>
+
+    <div class="flex-container">
+
+      <div>
+        <h1>DOUBTS SLOTS</h1>
+      </div>
+
+      <div>
+        <input type="text" id="search" placeholder="Search for names.." title="Type in a name">
+      </div>
+
+      <div>
+        <table id="doubts-table">
+          <tr class="header">
+            <th align="center" height="50" width="100"><b>Teacher</b></td>
+            <th align="center" height="50" width="100"><b>Monday</b></td>
+            <th align="center" height="50" width="100"><b>Tuesday</b></td>
+            <th align="center" height="50" width="100"><b>Wednesday</b></td>
+            <th align="center" height="50" width="100"><b>Thursday</b></td>
+            <th align="center" height="50" width="100"><b>Friday</b></td>
+          </tr>
+
+          <% for(const [key, val] of time_table) { %>
+
+            <tr>
+              <td align="center">
+                <%= key %>
+              </td>
+
+              <% for(let index=0; index!=val.length; index++)  { 
+                if(typeof val[index] == 'undefined' && val[index] == null) { %>
+
+                  <td align="center" ></td>
+
+                <% } else { %>
+
+                  <td align="center" height="50" width="130"><br>
+
+                  <% for(let slot=0 ; slot!= val[index].length; slot++) { %>
+                    <div>
+                      <button class="prof-name-table" onclick="">
+                        <div >
+                          <%= val[index][slot] %>
+                          <br>
+                        </div>
+                      </button>
+                    </div>
+                  <% } %>
+                  </td>
+                <% } %>
+              <% } %>
+            
+            </tr>
+            
+          <% } %>
+        </table>
+      </div>

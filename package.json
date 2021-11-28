@@ -16,6 +16,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-csp-header": "^5.0.0",
     "express-rate-limit": "^5.5.1",
     "helmet": "^4.6.0",
     "http-errors": "~1.6.3",

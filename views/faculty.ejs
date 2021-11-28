@@ -3,55 +3,102 @@
   <head>
     <title>student</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="stylesheets/landing-page.css">
+    <!-- <script src="https://use.fontawesome.com/f712b57e8b.js"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline', script-src-attr 'self' 'unsafe-inline'"> -->
   </head>
   <body>
-    <h4>Faculty Code: <%= facultyCode %> </h4>
+    
+      <%- include('table', { name: name , email: email, time_table: time_table}) %>
 
-     <h1>DOUBTS SLOTS</h1>
-     <table align="center" border="2">
-       <tr>
-        <td align="center" height="50" width="100"><br><b>Day/Slots</b></br></td>
-        <td align="center" height="50" width="100"><b>Monday</b></td>
-        <td align="center" height="50" width="100"><b>Tuesday</b></td>
-        <td align="center" height="50" width="100"><b>Wednesday</b></td>
-        <td align="center" height="50" width="100"><b>Thursday</b></td>
-        <td align="center" height="50" width="100"><b>Friday</b></td>
-       </tr>
+          <!-- <button id="add-slot" type="button" class="submit">Remove Slots</button> -->
+          <!-- <button id="add2-slot" type="button" class="submit">Add Slots</button> -->
+          <div class="card-deck">
 
-       <% for(const [key, val] of time_table) { %>
+            <div class="card border-dark bg-light mb-3" style="max-width: 18rem;">
+              <!-- <div class="card-header">Header</div> -->
+              <div class="card-body">
+                <h5 class="card-title">Add Slot</h5>
+                <p class="card-text">Add your doubts slots.</p>
+                <br>
+                <button type="button" id="add-slot" class="btn slot-btn btn-primary"><i class="fas fa-plus"></i>  Add</button>
+                
+              </div>
+            </div>
 
-        <tr>
-          <td align="center" height="50" width="100">
-            <%= key %>
-          </td>
+            <div class="card border-dark bg-light mb-3" style="max-width: 18rem;">
+              <!-- <div class="card-header">Header</div> -->
+              <div class="card-body">
+                <h5 class="card-title">Remove Slots</h5>
+                <p class="card-text">Delete your doubts slots.</p>
+                <br>
+                <button type="button" id="remove-slot" class="btn btn-danger"><i class="fas fa-trash-alt"></i>  Delete</button>
+                
+              </div>
+            </div>
 
-          <% for(let index=0; index!=val.length; index++)  { 
-            if(typeof val[index] == 'undefined' && val[index] == null) { %>
+          </div>
+        </div>
+      </div>
 
-              <td align="center" height="50" width="100"></td>
+      <div id="remove-slots-modal" class="slots-modal">
+        <div class="slots-content">
+            <span class="remove-content close">&times;</span>
+            <form action="/faculty/slot/remove" method="POST">
+              <div class="form-group">
+                <label for="day">Select the day</label><br>
+                <select name="day" class="form-control">
+                  <option>Monday</option>
+                  <option>Tuesday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="slot_details">Mention Slot</label><br>
+                <input type="text" class="form-control" name="slot_details" placeholder="Timings">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+      </div>
 
-            <% } else { %>
+      <div id="add-slot-modal" class="slots-modal">
+        <div class="slots-content">
+            <span class="add-content close">&times;</span>
 
-              <td align="center" height="50" width="100"><br>
+            <form action="/faculty/slot/add" method="POST">
+              <div class="form-group">
+                <label for="day">Select the day</label><br>
+                <select name="day" class="form-control">
+                  <option>Monday</option>
+                  <option>Tuesday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="slot_details">Mention Slot</label><br>
+                <input type="text" class="form-control" name="slot_details" placeholder="Timings">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+      </div>
 
-              <% for(let slot=0 ; slot!= val[index].length; slot++) { %>
-                <div>
-                  <button class="prof-name-table" onclick="">
-                    <div >
-                      <%= val[index][slot] %>
-                      <br>
-                    </div>
-                  </button>
-                </div>
-              <% } %>
-              </td>
-            <% } %>
-          <% } %>
-        
-        </tr>
-        
-      <% } %>
-     </table>
+    
+      <script src='./javascripts/popup.js'></script>
+      <script src='./javascripts/popup2.js'></script>
+      <script src = './javascripts/doubtsTable.js'></script>
+      <!-- <script>
+        let fff = document.getElementById("chk-sc");
+        fff.innerHTML="fds";
+      </script> -->
     
   </body>
 </html>

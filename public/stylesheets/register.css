@@ -84,3 +84,10 @@ body {
   .signup-box a:hover {
     color: #fff;
   }
+
+  .existing-user {
+    font-size: 12px;
+    font-family: inherit;
+    font-style: italic;
+    color: red;
+  }

@@ -7,7 +7,7 @@ const cors = require('cors');
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 var favicon = require('serve-favicon')
-const { signup, signin, logout, protectRoute, isLoggedIn } = require('./controllers/authController');
+const { signup, signin, logout } = require('./controllers/authController');
 
 
 var indexRouter = require('./routes/index');
@@ -64,7 +64,7 @@ app.use('/faculty', facultyRouter);
 app.use('/student',studentRouter);
 app.use('/signup',getRegister);
 app.use('/signin',getLogin);
-app.post("/logout",logout);
+app.get("/logout",logout);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -18,4 +18,4 @@ var scheduleSchema = new Schema(
     }
 );
 
-module.exports = mongoose.model('scheduleCollection',scheduleSchema,'A1');
+module.exports = mongoose.model('scheduleCollection',scheduleSchema,'A2');
