@@ -43,7 +43,7 @@ Online Doubts Addressal Platform
 ## Useful Links
 
 - [Deployed Website](https://faculty-connect.herokuapp.com/)
-- [Presentation] (https://docs.google.com/presentation/d/1rYfTsO1SaviD3GQMD4tHDUfGPZ_S_6jjrsr82BSKNgc/edit?usp=sharing)
+- [Presentation](https://docs.google.com/presentation/d/1rYfTsO1SaviD3GQMD4tHDUfGPZ_S_6jjrsr82BSKNgc/edit?usp=sharing)
 
 ## Need help?
 
