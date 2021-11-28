@@ -33,3 +33,24 @@ Online Doubts Addressal Platform with `FacultyConnect`
    - `npm install`
 4. `npm run devstart`
 5. The app is now running at localhost:3000
+
+## Useful Links
+
+- [Deployed Website](https://faculty-connect.herokuapp.com/)
+
+## Need help?
+
+Feel free to contact me on [LinkedIn](https://www.linkedin.com/in/saakshi07/) 
+
+
+---------
+
+```javascript
+
+if (youEnjoyed) {
+    starThisRepository();
+}
+
+```
+
+-----------
