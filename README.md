@@ -8,7 +8,6 @@ Online Doubts Addressal Platform
 ![GitHub Repo stars](https://img.shields.io/github/stars/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sa4k5hi/FacultyConnect?style=for-the-badge)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg?style=for-the-badge)](https://github.com/sa4k5hi)
-![Github code size] (https://img.shields.io/github/languages/code-size/badges/shields.svg)
 
 
 ## Features
