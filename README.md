@@ -1,6 +1,8 @@
 # FacultyConnect
 Online Doubts Addressal Platform
 
+![GitHub](https://img.shields.io/github/license/sa4k5hi/FacultyConnect?style=for-the-badge)
+
 ## Features
 
 1. Landing Page
@@ -35,6 +37,7 @@ Online Doubts Addressal Platform
 ## Useful Links
 
 - [Deployed Website](https://faculty-connect.herokuapp.com/)
+- [Presentation] (https://docs.google.com/presentation/d/1rYfTsO1SaviD3GQMD4tHDUfGPZ_S_6jjrsr82BSKNgc/edit?usp=sharing)
 
 ## Need help?
 
