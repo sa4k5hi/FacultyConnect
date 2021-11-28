@@ -1,8 +1,8 @@
 # FacultyConnect
 Online Doubts Addressal Platform
 
-![GitHub](https://img.shields.io/github/license/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![Lines of code](https://img.shields.io/tokei/lines/github/sa4k5hi/FacultyConnect?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/sa4k5hi/FacultyConnect?style=for-the-badge)
