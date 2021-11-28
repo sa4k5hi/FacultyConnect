@@ -26,11 +26,11 @@ Online Doubts Addressal Platform
 ## Instructions
 
 1. `git clone https://github.com/sa4k5hi/FacultyConnect.git` 
-2. `cd ./hello`
+2. `cd ./FacultyConnect`
 3. Install node dependencies 
    - `npm install`
 4. `npm run devstart`
-5. The app is now running at localhost:3000
+5. The app is now running at https://localhost:3000
 
 ## Useful Links
 
