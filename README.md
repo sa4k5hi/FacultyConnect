@@ -31,6 +31,9 @@ Online Doubts Addressal Platform
     - Add Slots by mentioning the day and the time details.
     - Remove Slot by mentioning the day and the time details.
 
+5. Rate Limiter
+    - Use to limit repeated requests to APIs and/or endpoints.
+
 ## Instructions
 
 1. `git clone https://github.com/sa4k5hi/FacultyConnect.git` 
