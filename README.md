@@ -3,6 +3,7 @@ Online Doubts Addressal Platform
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub license](https://img.shields.io/github/license/sa4k5hi/FacultyConnect?style=for-the-badge)
+![visitor badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=sa4k5hi.FacultyConnect&style=for-the-badge&color=red)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sa4k5hi/FacultyConnect?logo=github&style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/sa4k5hi/FacultyConnect?style=for-the-badge)
