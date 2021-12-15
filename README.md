@@ -1,12 +1,15 @@
 # FacultyConnect
 Online Doubts Addressal Platform
 
-![GitHub](https://img.shields.io/github/license/sa4k5hi/FacultyConnect?style=for-the-badge)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/sa4k5hi/FacultyConnect?style=for-the-badge)
+![GitHub license](https://img.shields.io/github/license/sa4k5hi/FacultyConnect?style=for-the-badge)
+![visitor badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=sa4k5hi.FacultyConnect&style=for-the-badge&color=red)
+![GitHub repo size](https://img.shields.io/github/repo-size/sa4k5hi/FacultyConnect?logo=github&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/sa4k5hi/FacultyConnect?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/sa4k5hi/FacultyConnect?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/sa4k5hi/FacultyConnect?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/sa4k5hi/FacultyConnect?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/sa4k5hi/FacultyConnect?style=for-the-badge)
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg?style=for-the-badge)](https://github.com/sa4k5hi)
+![GitHub last commit](https://img.shields.io/github/last-commit/sa4k5hi/FacultyConnect?style=for-the-badge&logo=git)
+![Depfu](https://img.shields.io/depfu/sa4k5hi/FacultyConnect?style=for-the-badge)
+[![Ask Me Anything](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg?style=for-the-badge)](https://github.com/sa4k5hi)
 
 
 ## Features
